@@ -3,4 +3,5 @@
 
 ### Table of contents:
 - [The basics](basics.md)
-- [Blicking the event loop](blocking.md)
+- [Working with Tukaan windows](windows.md)
+- [Blocking the event loop](blocking.md)

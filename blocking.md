@@ -34,21 +34,17 @@ import tukaan
 
 app = tukaan.App()
 
-
 def this_is_a_blocking_func():
     time.sleep(4)  # Block the thread
     this_is_a_data = "Hi! I'm from another thread!"
     app.generate_event("<<VirtualEventFromAnotherThread>>", data=this_is_a_data)
 
-
 def event_receiver(event):
     print(f"Event received with data: {event.data}")
-
 
 app.bind("<<VirtualEventFromAnotherThread>>", event_receiver, send_event=True)
 
 threading.Thread(target=this_is_a_blocking_func).start()
-
 
 app.run()
 ```

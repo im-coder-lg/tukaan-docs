@@ -1,4 +1,4 @@
-# The basics
+# The basics of Tukaan
 
 Tukaan works by using an embedded Tcl/Tk interpreter, and translating the Python functions to Tcl commands. Tkinter works similarly, but it doesn't always translate the objects returned from Tcl to a Python object, so sometimes you get back a string instead of a list or a float. Tukaan does this **way** better.
 
@@ -56,6 +56,6 @@ app = tukaan.App()
 
 app.run()
 ```
-See? With three lines of code we have a working window, that responds to maximizing and closing without having to worry about processing and dispatching event or redrawing the screen as it's size changes.
+See? With three lines of code we have a working window, that responds to maximizing and closing without having to worry about processing and dispatching events or redrawing the screen as it's size changes.
 
 You might think that you can't access these events from within the program, because they are handled internally, but fortunately this is not the case. Tukaan (i.e. Tcl/Tk) sends event to widgets, to which you can bind functions and get some useful data about the event. In fact, you can even generate your own events that the widgets can respond to.
